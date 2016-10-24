@@ -295,7 +295,7 @@ h2 img {
 /*margin-top: 50px;*/
 /*}*/
 
-#popup {
+.popup-window {
     position: fixed;
     display: none;
     /*background: lightgray;*/
@@ -307,10 +307,10 @@ h2 img {
     box-shadow: 0 3px 10px #222;
     top:50%;
     left:50%;
-    width:700px;  /* adjust as per your needs */
-    height:500px;   /* adjust as per your needs */
-    margin-left:-350px;   /* negative half of width above */
-    margin-top:-250px;
+    width:900px;  /* adjust as per your needs */
+    height:700px;   /* adjust as per your needs */
+    margin-left:-450px;   /* negative half of width above */
+    margin-top:-350px;
     z-index: 99;
     /*display: flex;*/
     justify-content: center;
@@ -323,6 +323,24 @@ h2 img {
     justify-content: center !important;
     align-items: center !important;
     flex-direction: column !important;
+}
+
+.popup-window p.heading-b {
+    font-size: 30px;
+    padding-bottom: 15px;
+}
+
+.popup-window p.description {
+    font-size: 16px;
+    /*text-indent: 20px;*/
+}
+
+.popup-window p.back {
+    /*color: #007700;*/
+    color: #0086ff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 

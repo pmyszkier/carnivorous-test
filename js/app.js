@@ -55,7 +55,6 @@ $(document).ready(function () {
         // }
 
 
-
         var headerTop = $('header').offset().top; // pozycja elementu nav
         console.log(headerTop);
         // var stickyNav = function(){
@@ -77,7 +76,6 @@ $(document).ready(function () {
         console.log(stickyNavTop);
         // var resizeTop = $(window).resizeTop();  // !!!pozycja przewijania okna reagująca na resize
     });
-
 
 
     // Zadanie 2
@@ -106,32 +104,31 @@ $(document).ready(function () {
     });
 
 
-
-
-        $(".popup").click(function(){
-
-            // var tresc = jQuery(this).attr("name");
-            //
-            // jQuery("#popup").html(tresc);
-//
-            $(this).next().fadeIn();
-            $(this).next().addClass('flex');
-
-        }).parent().parent().parent().parent().mouseleave(function(){
-
-            $("#popup").fadeOut();
-            $("#popup").removeClass('flex')();
-
-       });
-
-    $("#popup").click(function(){
+    $(".popup-click").click(function () {
 
         // var tresc = jQuery(this).attr("name");
         //
         // jQuery("#popup").html(tresc);
 //
-        $("#popup").fadeOut();
-        $("#popup").removeClass('flex')();
+        $(this).next().fadeIn();
+        $(this).next().addClass('flex');
+
+    });
+    $(".popup-click").parent().parent().parent().parent().mouseleave(function () {
+
+        $(".popup-click").next().fadeOut();
+        $(".popup-click").next().removeClass('flex')();
+
+    });
+
+    $(".popup-click").next().click(function () {
+
+        // var tresc = jQuery(this).attr("name");
+        //
+        // jQuery("#popup").html(tresc);
+//
+        $(".popup-click").next().fadeOut();
+        $(".popup-click").next().removeClass('flex')();
 
     });
 
@@ -142,8 +139,6 @@ $(document).ready(function () {
 //            jQuery("#popup").css('top', e.pageY+10);
 //
 //        });
-
-
 
 
 });
