@@ -4,7 +4,8 @@
 }
 
 section {
-    padding: 25px 0 35px;
+    /*padding: 25px 0 35px;*/
+    padding: 45px 0 35px;
     background: #fff;
 }
 
@@ -143,6 +144,10 @@ header .shown-submenu {
     padding: 0 0 0 5px;
     float: left;
     line-height: 25px;
+}
+
+.menu a {
+    color: white;
 }
 
 /********************/
@@ -285,6 +290,10 @@ h2 img {
     cursor: pointer;
     padding-top: 5px;
 }
+
+/*.margin-top {*/
+    /*margin-top: 50px;*/
+/*}*/
 
 
 

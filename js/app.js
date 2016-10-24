@@ -77,6 +77,36 @@ $(document).ready(function () {
         console.log(stickyNavTop);
         // var resizeTop = $(window).resizeTop();  // !!!pozycja przewijania okna reagująca na resize
     });
+
+
+
+    // Zadanie 2
+    // Znajdź w pliku index.html element o klasie menu. Stwórz odpowiednią funkcję, wykonaj w niej następujące czynności:
+//     ustaw event click na elemencie a,
+//     pobierz do zmiennej wartość atrybutu href,
+//     za pomocą animate stwórz efekt łagodnego przewijania całej strony do miejsca o id pobranym z atrybutu href.
+//
+//     Jeśli ktoś kliknie w link Blog nhash; strona ma się przesuwać się do paragrafu o id blog itp.
+//     Wskazówka: skorzystaj z pomocy StackOverFlow :)
+    var a = $('a');
+
+    a.on('click', function (e) {
+        var href = $(this).attr('href'); // pobranie wartości id dla href czyli id dalej położonego nagłówka
+        console.log(href);
+        // $('#href').addClass('margin-top');
+        // var p = $(href).position();
+        // console.log(p);
+        e.preventDefault();
+
+        $('html,body').animate({
+            scrollTop: $(href).offset().top //przewijanie strony przez 2 sekundy, aby nagłówek o wywołanym id przewijał się do góry
+        }, 2000);
+
+
+    });
+
+
+
 });
 
 

@@ -7,6 +7,9 @@
     <title>Carnisana</title>
     <link href="./parallax.js/css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Popup-master/assets/css/popup.css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <!--<script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
@@ -80,11 +83,11 @@
         <ul class="menu">
             <!--<li class="logo">Sit <span>on</span> chair</li>-->
             <!--<div class="right-div">-->
-            <li class="products">Produkty</li>
-            <li class="about">O nas</li>
-            <li class="conditions">Warunki sprzedaży</li>
-            <li class="contact">Uprawa</li>
-            <li class="gallery">Galeria
+            <li class="products"><a href="#products">Produkty</a></li>
+            <li class="about"><a href="#about">O nas</a></li>
+            <li class="conditions"><a href="#conditions">Warunki sprzedaży</a></li>
+            <li class="cultivation"><a href="#cultivation">Uprawa</a></li>
+            <li class="gallery"><a href="#gallery">Galeria</a>
                 <!--<ul class="submenu">-->
                     <!--<div class="diamond"></div>-->
                     <!--<li class="">Galeria 1</li>-->
@@ -92,7 +95,7 @@
                     <!--<li class="">Galeria 3</li>-->
                 <!--</ul>-->
             </li>
-            <li class="contact">Kontakt</li>
+            <li class="contact"><a href="#contact">Kontakt</a></li>
             <li class="cart">Koszyk (0)
 
             </li>
@@ -138,7 +141,7 @@
 <!--</div>-->
 
 
-<section class="section-two">
+<section id="about" class="section-two">
     <div class="container">
 
         <h2 id="installation2" class="container-title">
@@ -326,7 +329,7 @@
      data-natural-height="900">
 </div>
 
-<section class="section-three">
+<section id="conditions" class="section-three">
     <div class="container">
 
         <h2 id="installation3" class="container-title">
@@ -488,7 +491,7 @@
      data-natural-height="900">
 </div>
 
-<section class="section-four">
+<section id="cultivation" class="section-four">
     <div class="container">
 
         <h2 id="installation4" class="container-title">
@@ -668,7 +671,7 @@
                             <!--<p>-->
                                 <p class="title">Najłatwiejsze w uprawie są rosiczki klimatu podzwrotnikowego, które najlepiej rosną w pełnym słońcu umożliwiającym prawidłowy wzrost i wybarwienie się roślin. Najlepszym miejscem na uprawę </p>
                                 <!--<br>-->
-                                <p class="highlight">więcej...</p>
+                                <p class="highlight popup">więcej...</p>
                             <!--</p>-->
                         </div>
                     </div>
@@ -876,7 +879,7 @@
 <!--<div class="parallax-container" data-parallax="scroll" data-bleed="10" data-speed="0.2" data-image-src="./img/helix-nebula-1400x1400.jpg" data-natural-width="1400" data-natural-height="1400"></div>-->
 
 <br>
-<section class="section-five">
+<section id="gallery" class="section-five">
     <div class="container">
         <h2 id="options" class="container-title">
             Galeria &nbsp;
@@ -1183,7 +1186,7 @@
 <!--<div class="parallax-container" data-parallax="scroll" data-bleed="10" data-image-src="./img/reflection-nebula-750x763.jpg" data-natural-width="750" data-natural-height="763"></div>-->
 
 
-<section class="section-six">
+<section id="contact" class="section-six">
 
     <!--<div class="view">-->
     <!--<img alt="" class="bg" src="images/placeholders/1920x1200-2.jpg" style="transform: translate3d(-315.4px, 108px, 0px) scale(1.02658, 1.02658); opacity: 1; transform-origin: right top 0px;"><img alt="" class="bg" src="images/placeholders/1920x1200-0.jpg" style="transform: translate3d(-315.4px, 106px, 0px) scale(1.0931, 1.0931); opacity: 0.000719582; transform-origin: right center 0px;">-->
@@ -1583,6 +1586,18 @@
 <!--ga('create', 'UA-20587204-9', 'auto');-->
 <!--ga('send', 'pageview');-->
 <!--</script>-->
+
+<script type="text/javascript">
+$('p.popup').popup();
+
+// Passing in options
+var options = { optionName : optionValue };
+$('p.popup').popup(options);
+</script>
+
+
+
+<script src="./Popup-master/assets/js/jquery.popup.min.js"></script>
 </body>
 <script src="./js/app.js"></script>
 
