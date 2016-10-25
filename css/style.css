@@ -319,10 +319,11 @@ h2 img {
 
 .section-four .col-md-2.col-sm-6.col-xs-6 {
     border: 1px solid #16a085;
-    padding-top: 10px;
+    padding-top: 20px;
     margin: 0 0;
     box-sizing: border-box;
     cursor: pointer;
+    min-height: 420px;
 }
 
 .section-four .col-md-2.col-sm-6.col-xs-6:hover {
@@ -431,7 +432,7 @@ h2 img {
 .img-transform {
     -ms-transform: rotate(7deg); /* IE 9 */
     -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
-    transform: rotate(7deg);
+    transform: scale(1.2) rotate(7deg);
     -webkit-transition-duration: 1s; /* Safari */
     transition-duration: 1s;
     opacity: 0.5;
