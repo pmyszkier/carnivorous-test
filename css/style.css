@@ -325,6 +325,7 @@ h2 img {
     box-sizing: border-box;
     cursor: pointer;
     min-height: 420px;
+    background: white;
 }
 
 .section-four .col-md-2.col-sm-6.col-xs-6:hover {
