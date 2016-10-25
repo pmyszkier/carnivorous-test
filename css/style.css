@@ -76,6 +76,7 @@ header {
     /*width: 1048px;*/
     width: 100%;
     margin: 0 auto;
+    z-index: 100;
 }
 
 .row-header > ul > li {
@@ -117,6 +118,11 @@ header .submenu {
 
 header .shown-submenu {
     display: inherit;
+}
+
+.show {
+    height: 50px;
+    /*background: transparent;*/
 }
 
 .diamond {
@@ -234,7 +240,8 @@ input.submit {
 }
 
 #cookie-bar .cb-enable {
-    background: #007700;
+    /*background: #007700;*/
+    background: #16a085;
     line-height: 25px;
 }
 
@@ -254,6 +261,11 @@ section.section-zero {
 .pusta-miska {
     text-align: center;
 }
+
+.section-three ul span {
+    font-weight: 700;
+}
+
 
 .section-five img.icons8-Facebook-Filled {
     margin-bottom: 10px;
@@ -279,16 +291,22 @@ h2 img {
 
 .section-four p.highlight {
     text-align: center;
-    color: #0086ff;
+    /*color: #0086ff;*/
+    color: #16a085;
     cursor: pointer;
 }
 
 .section-four p.heading-b {
     font-weight: 600;
     font-size: 20px;
-    color: #007700;
+    /*color: #007700;*/
+    color: #16a085;
     cursor: pointer;
     padding-top: 5px;
+}
+
+.section-four p.title {
+    min-height: 100px;
 }
 
 /*.margin-top {*/
@@ -305,17 +323,24 @@ h2 img {
     background: #fff;
     padding: 25px;
     box-shadow: 0 3px 10px #222;
-    top:50%;
-    left:50%;
-    width:900px;  /* adjust as per your needs */
-    height:700px;   /* adjust as per your needs */
-    margin-left:-450px;   /* negative half of width above */
-    margin-top:-350px;
+    top: 50%;
+    left: 50%;
+    width: 80vw;
+    max-width: 900px;
+    /*width:900px;  !* adjust as per your needs *!*/
+    /*height:700px;   !* adjust as per your needs *!*/
+    /*margin-left:-450px;   !* negative half of width above *!*/
+    /*margin-top:-350px;*/
     z-index: 99;
     /*display: flex;*/
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    /*position: fixed;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
 }
 
 .flex {
@@ -337,11 +362,65 @@ h2 img {
 
 .popup-window p.back {
     /*color: #007700;*/
-    color: #0086ff;
+    /*color: #0086ff;*/
+    color: #16a085;
     text-transform: uppercase;
     font-weight: bold;
     cursor: pointer;
 }
 
+.section-five .text-center img {
+    width: 100%;
+    /*width: 12vw;*/
+    height: 8vw;
+}
 
+.section-five .popup-window {
+    height: auto;
+}
+
+.section-five .popup-window img {
+    /*width: 100%;*/
+    max-width: 70vw;
+    max-height: 70vh;
+}
+
+.section-five p.title {
+    text-align: center;
+}
+
+.section-five .popup-window {
+    /*height: 700px;*/
+    /*margin-left: -45vw;*/
+    /*margin-top: -45vh;*/
+    max-height: 90vh;
+    /*max-width: 80vw;*/
+    max-width: 1100px;
+}
+
+.section-six input, .section-six textarea {
+    width: 100%;
+    padding: 10px;
+    /*font-weight: 700;*/
+    font-weight: normal;
+    border: 1px solid #222;
+}
+
+.section-six input.button {
+    width: auto;
+    min-width: 80px;
+    float: right;
+    background: #16a085;
+    text-transform: uppercase;
+    /*font-size: 18px;*/
+    font-weight: normal;
+}
+
+.section-six textarea {
+    min-height: 240px;
+}
+
+.big-font strong {
+    color: #16a085;
+}
 

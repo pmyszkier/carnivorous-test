@@ -49,7 +49,7 @@ $(document).ready(function () {
         // //     console.log(scrollTop);
         //
         // if (scrollTop > stickyNavTop) {
-        //     ulMenu.addClass('sticky'); //przyczepiamy menu do góry okna
+        //     ulMenu.addClass('sticky'); //przyczepiay menu do góry okna
         // } else {
         //     ulMenu.removeClass('sticky');
         // }
@@ -58,8 +58,8 @@ $(document).ready(function () {
         var headerTop = $('header').offset().top; // pozycja elementu nav
         console.log(headerTop);
         // var stickyNav = function(){
-        //     var scrollTop = $(window).scrollTop();  // !!!pozycja przewijania okna
-        //     console.log(scrollTop);
+        var scrollTop = $(window).scrollTop();  // !!!pozycja przewijania okna
+            console.log(scrollTop);
 
         if (scrollTop > headerTop) {
             nav.addClass('sticky'); //przyczepiamy menu do góry okna
@@ -87,6 +87,7 @@ $(document).ready(function () {
 //     Jeśli ktoś kliknie w link Blog nhash; strona ma się przesuwać się do paragrafu o id blog itp.
 //     Wskazówka: skorzystaj z pomocy StackOverFlow :)
     var a = $('a');
+    var additionalDiv = $('.additional'); //dodatkowy box zatrzymujący sekcję 1 pod menu
 
     a.on('click', function (e) {
         var href = $(this).attr('href'); // pobranie wartości id dla href czyli id dalej położonego nagłówka
@@ -94,14 +95,32 @@ $(document).ready(function () {
         // $('#href').addClass('margin-top');
         // var p = $(href).position();
         // console.log(p);
-        e.preventDefault();
 
-        $('html,body').animate({
-            scrollTop: $(href).offset().top //przewijanie strony przez 2 sekundy, aby nagłówek o wywołanym id przewijał się do góry
-        }, 2000);
+        e.preventDefault();
+        // additionalDiv.addClass('show');  //DO ZMIANY PÓŹNIEJ
+
+
+        var scrollTop = $(window).scrollTop();
+        // $('html,body').animate({
+        //     scrollTop: $(href).offset().top //przewijanie strony przez 2 sekundy, aby nagłówek o wywołanym id przewijał się do góry
+        // }, 2000);
+        if (scrollTop < 255){
+            additionalDiv.addClass('show');  //DO ZMIANY PÓŹNIEJ
+            $('html,body').animate({
+                scrollTop: $(href).offset().top //przewijanie strony przez 2 sekundy, aby nagłówek o wywołanym id przewijał się do góry
+            }, 2000);
+        } else {
+            additionalDiv.removeClass('show');  //DO ZMIANY PÓŹNIEJ
+            $('html,body').animate({
+                scrollTop: $(href).offset().top //przewijanie strony przez 2 sekundy, aby nagłówek o wywołanym id przewijał się do góry
+            }, 2000);
+        }
+
+
 
 
     });
+
 
 
     $(".popup-click").click(function () {
