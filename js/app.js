@@ -101,20 +101,41 @@ $(document).ready(function () {
 
 
         var scrollTop = $(window).scrollTop();
-        // $('html,body').animate({
-        //     scrollTop: $(href).offset().top //przewijanie strony przez 2 sekundy, aby nagłówek o wywołanym id przewijał się do góry
-        // }, 2000);
-        if (scrollTop < 255){
-            additionalDiv.addClass('show');  //DO ZMIANY PÓŹNIEJ
-            $('html,body').animate({
-                scrollTop: $(href).offset().top //przewijanie strony przez 2 sekundy, aby nagłówek o wywołanym id przewijał się do góry
-            }, 2000);
-        } else {
-            additionalDiv.removeClass('show');  //DO ZMIANY PÓŹNIEJ
-            $('html,body').animate({
-                scrollTop: $(href).offset().top //przewijanie strony przez 2 sekundy, aby nagłówek o wywołanym id przewijał się do góry
-            }, 2000);
+        $('html,body').animate({
+            scrollTop: $(href).offset().top //przewijanie strony przez 2 sekundy, aby nagłówek o wywołanym id przewijał się do góry
+        }, 2000);
+        if ($(window).width() > 991) {
+            if (scrollTop < 255) {
+                // $('body').addClass('body-margin');
+                // additionalDiv.addClass('show');  //DO ZMIANY PÓŹNIEJ
+
+                $('html,body').animate({
+                    scrollTop: $(href).offset().top //przewijanie strony przez 2 sekundy, aby nagłówek o wywołanym id przewijał się do góry
+                }, 2000);
+                scrollTop = scrollTop - 50;
+            } else {
+                // $('body').removeClass('body-margin');
+                additionalDiv.removeClass('show');  //DO ZMIANY PÓŹNIEJ
+                $('html,body').animate({
+                    scrollTop: $(href).offset().top //przewijanie strony przez 2 sekundy, aby nagłówek o wywołanym id przewijał się do góry
+                }, 2000);
+            }
         }
+        // else {
+        //     if (scrollTop < 485) {
+        //         additionalDiv.addClass('show-mobile');  //DO ZMIANY PÓŹNIEJ
+        //         $('html,body').animate({
+        //             scrollTop: $(href).offset().top //przewijanie strony przez 2 sekundy, aby nagłówek o wywołanym id przewijał się do góry
+        //         }, 2000);
+        //
+        //     } else {
+        //         additionalDiv.removeClass('show-mobile');  //DO ZMIANY PÓŹNIEJ
+        //         $('html,body').animate({
+        //             scrollTop: $(href).offset().top //przewijanie strony przez 2 sekundy, aby nagłówek o wywołanym id przewijał się do góry
+        //         }, 2000);
+        //     }
+        //
+        // }
 
 
 
@@ -136,7 +157,7 @@ $(document).ready(function () {
     $(".popup-click").parent().parent().parent().parent().mouseleave(function () {
 
         $(".popup-click").next().fadeOut();
-        $(".popup-click").next().removeClass('flex')();
+        $(".popup-click").next().removeClass('flex');
 
     });
 
@@ -147,7 +168,7 @@ $(document).ready(function () {
         // jQuery("#popup").html(tresc);
 //
         $(".popup-click").next().fadeOut();
-        $(".popup-click").next().removeClass('flex')();
+        $(".popup-click").next().removeClass('flex');
 
     });
 
@@ -159,6 +180,56 @@ $(document).ready(function () {
 //
 //        });
 
+
+    if ($(window).width() <= 991) { // warunek dla ekranów o zakładanej szerokości
+        $(".mobile-menu").click(function () {
+
+            $(this).siblings().toggle();
+            // $(".popup-click").next().removeClass('flex')();
+
+        });
+
+        $(".li-menu").click(function () {
+
+            $(".li-menu").hide();
+            $(".mobile-menu").show();
+
+            // if (scrollTop < 500){
+            //     additionalDiv.addClass('show-mobile');  //DO ZMIANY PÓŹNIEJ
+            //     $('html,body').animate({
+            //         scrollTop: $(href).offset().top //przewijanie strony przez 2 sekundy, aby nagłówek o wywołanym id przewijał się do góry
+            //     }, 2000);
+            // } else {
+            //     additionalDiv.removeClass('show-mobile');  //DO ZMIANY PÓŹNIEJ
+            //     $('html,body').animate({
+            //         scrollTop: $(href).offset().top //przewijanie strony przez 2 sekundy, aby nagłówek o wywołanym id przewijał się do góry
+            //     }, 2000);
+            // }
+
+        });
+
+    // $(window).scroll(function () {
+    //     additionalDiv.removeClass('show-mobile');
+    //
+    // });
+
+    }
+
+    $(".section-five .overlay img").mouseover(function () { //poruszanie obrazkami w galerii
+        // $(this).css('transform','rotate(7deg)');
+        $(this).addClass('img-transform');
+
+        });
+
+    $(".section-five .overlay img").mouseleave(function () {
+        // $(this).css('transform','rotate(0deg)');
+        $(this).removeClass('img-transform');
+    });
+
+    $(".text-center").click(function () {
+        // $(this).css('transform','rotate(0deg)');
+        $('.hide-map').toggleClass('show-map');
+    });
 
 });
 

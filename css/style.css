@@ -124,6 +124,14 @@ header .shown-submenu {
     height: 50px;
     /*background: transparent;*/
 }
+.show-mobile {
+    height: 485px;
+    /*background: transparent;*/
+}
+
+.body-margin {
+    margin-top: 50px;
+}
 
 .diamond {
     position: absolute;
@@ -309,6 +317,18 @@ h2 img {
     min-height: 100px;
 }
 
+.section-four .col-md-2.col-sm-6.col-xs-6 {
+    border: 1px solid #16a085;
+    padding-top: 10px;
+    margin: 0 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.section-four .col-md-2.col-sm-6.col-xs-6:hover {
+    background: lightblue;
+}
+
 /*.margin-top {*/
 /*margin-top: 50px;*/
 /*}*/
@@ -385,6 +405,16 @@ h2 img {
     max-height: 70vh;
 }
 
+
+.section-five .text-center img:hover {
+    background-image: url("../img/carnisana-tlo.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+
+
 .section-five p.title {
     text-align: center;
 }
@@ -397,6 +427,18 @@ h2 img {
     /*max-width: 80vw;*/
     max-width: 1100px;
 }
+
+.img-transform {
+    -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+    transform: rotate(7deg);
+    -webkit-transition-duration: 1s; /* Safari */
+    transition-duration: 1s;
+    opacity: 0.5;
+    cursor: pointer;
+
+}
+
 
 .section-six input, .section-six textarea {
     width: 100%;
@@ -420,7 +462,118 @@ h2 img {
     min-height: 240px;
 }
 
+.section-six .fa-circle:before {
+    content: initial;
+}
+
+.section-six #map {
+    padding-top: 15px;
+}
+
+
+
 .big-font strong {
     color: #16a085;
 }
+
+.hide-map {
+    display: none;
+}
+
+.show-map {
+    display: inherit;
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .section-five .text-center img {
+        /*height: 250px;*/
+        height: 30vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-five .text-center img {
+        /*height: 180px;*/
+        height: 40vw;
+    }
+}
+
+@media (max-width: 991px) {
+    .parallax-container {
+        /*height: 0px !important;*/
+        display: none;
+    }
+    .row-header {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-direction: column !important;
+    }
+
+    header ul {
+        display: table-caption;
+        width:100%;
+        /* width: 100%; */
+    }
+    header li {
+        /*min-width: 300px;*/
+        width: 100%;
+        /*display: none !important;*/
+    }
+
+    .find form {
+        text-align: center;
+    }
+
+    .mobile-menu {
+        display: inherit !important;
+    }
+
+    .section-six .owner {
+        display: inline-table;
+        padding-left: 25px;
+    }
+
+    .section-six textarea {
+        min-height: 100px;
+    }
+
+    .menu .fa-bars {
+        float: right;
+        font-size: 35px;
+        line-height: 46px;
+    }
+
+    section.section-one {
+        height: 20.7vw;
+    }
+
+    section.section-one img#header-logo {
+        width: 95vw;
+        height: 20.7vw;
+    }
+
+    .section-four .col-md-2.col-sm-6.col-xs-6 {
+        min-height: 350px;
+    }
+
+    .section-five .col-md-2.col-sm-6.col-xs-6 {
+        min-height: 350px;
+    }
+
+}
+
+
+/*.animate_image {*/
+    /*margin:0 auto;*/
+    /*width:450px;*/
+    /*height:281px;*/
+    /*transition: background-image 1s ease-in-out;*/
+    /*background-image:url("/img/jeden.jpg");*/
+/*}*/
+
+/*.animate_image:hover {*/
+    /*background-image:url("/img/carnisana-tlo.jpg");*/
+/*}*/
 

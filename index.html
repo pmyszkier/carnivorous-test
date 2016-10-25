@@ -7,6 +7,7 @@
     <title>Carnisana</title>
     <link href="./parallax.js/css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
 
     <!--<link rel="stylesheet" href="./Popup-master/assets/css/popup.css">-->
 
@@ -61,7 +62,7 @@
         <a href="./set_lang.php?language=pl"><img class="flag" src="./img/Poland.png" alt="Polski"></a>
         <a href="./set_lang.php?language=en"><img class="flag" src="./img/United_Kingdom.png" alt="English"></a>
     </div>
-    <div class="logo"><img src="img/img_top.png"/></div>
+    <div class="logo"><img id="header-logo" src="img/img_top.png"/></div>
 
     <!--<div class="container">-->
     <!--<div id="ios-notice" class="alert alert-info hidden"><p><strong>Notice:</strong> Hello mobile user.-->
@@ -83,11 +84,12 @@
         <ul class="menu">
             <!--<li class="logo">Sit <span>on</span> chair</li>-->
             <!--<div class="right-div">-->
-            <li class="products"><a href="#products">Produkty</a></li>
-            <li class="about"><a href="#about">O nas</a></li>
-            <li class="conditions"><a href="#conditions">Warunki sprzedaży</a></li>
-            <li class="cultivation"><a href="#cultivation">Uprawa</a></li>
-            <li class="gallery"><a href="#gallery">Galeria</a>
+            <li class="mobile-menu hidden"><a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
+            <li class="li-menu products"><a href="#products">Produkty</a></li>
+            <li class="li-menu about"><a href="#about">O nas</a></li>
+            <li class="li-menu conditions"><a href="#conditions">Warunki sprzedaży</a></li>
+            <li class="li-menu cultivation"><a href="#cultivation">Uprawa</a></li>
+            <li class="li-menu gallery"><a href="#gallery">Galeria</a>
                 <!--<ul class="submenu">-->
                 <!--<div class="diamond"></div>-->
                 <!--<li class="">Galeria 1</li>-->
@@ -95,11 +97,11 @@
                 <!--<li class="">Galeria 3</li>-->
                 <!--</ul>-->
             </li>
-            <li class="contact"><a href="#contact">Kontakt</a></li>
-            <li class="cart">Koszyk (0)
+            <li class="li-menu contact"><a href="#contact">Kontakt</a></li>
+            <li class="li-menu cart">Koszyk (0)
 
             </li>
-            <li class="find" style="text-align: right;">
+            <li class="li-menu find" style="text-align: right;">
 
                 <form action="/" method="get">
                     <input type="hidden" name="p" value="productsList">
@@ -937,47 +939,6 @@
 
         </td>
 
-
-        <!--<p>Download and include <code>parallax.min.js</code> in your document after including jQuery.</p>-->
-
-        <!--<pre><code>&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js&quot;&gt;&lt;/script&gt;-->
-        <!--&lt;script src=&quot;/path/to/parallax.js&quot;&gt;&lt;/script&gt;-->
-        <!--</code></pre>-->
-
-        <!--<h2 id="useage2">Useage</h2>-->
-
-        <!--<h3 id="viadataattributes2">Via data attributes</h3>-->
-
-        <!--<p>To easily add a parallax effect behind an element, add <code>data-parallax=&quot;scroll&quot;</code> to the-->
-        <!--element you want to use, and specify an image with-->
-        <!--<code>data-image-src=&quot;/path/to/image.jpg&quot;</code>.</p>-->
-
-        <!--<pre><code>&lt;div class=&quot;parallax-window&quot; data-parallax=&quot;scroll&quot; data-image-src=&quot;/path/to/image.jpg&quot;&gt;&lt;/div&gt;-->
-        <!--</code></pre>-->
-
-        <!--<h3 id="viajavascript2">Via JavaScript</h3>-->
-
-        <!--<p>To call the parallax plugin manually, simply select your target element with jQuery and do the following:</p>-->
-
-        <!--<pre><code>$('.parallax-window').parallax({imageSrc: '/path/to/image.jpg'});-->
-        <!--</code></pre>-->
-
-        <!--<h3 id="underthehood2">Under The Hood</h3>-->
-
-        <!--<p>What parallax.js will do is create a fixed-position element for each parallax image at the start of the-->
-        <!--document&#8217;s body. This mirror element will sit behind the other elements and match the position and-->
-        <!--dimensions of its target object.</p>-->
-
-        <!--<p>Due to the nature of this implementation, you must ensure that these parallax objects and any layers below-->
-        <!--them are transparent so that you can see the parallax effect underneath. Also, if there is no other content-->
-        <!--in this element, you will need to ensure that it has some fixed dimensions otherwise you won&#8217;t see-->
-        <!--anything.</p>-->
-
-        <!--<pre><code>.parallax-window {-->
-        <!--min-height: 400px;-->
-        <!--background: transparent;-->
-        <!--}-->
-        <!--</code></pre>-->
     </div>
 </section>
 
@@ -2035,25 +1996,29 @@
                          width="50" height="50">
 
                 </h2>
-                <p class="header-details">Skontaktuj się z nami</p>
+                <!--<p class="header-details">Skontaktuj się z nami</p>-->
                 <div class="row">
                     <div class="col-md-6">
                         <div class="text-right scroll-in-animation player fadeInLeft animated css-animation-show"
                              data-animation="fadeInLeft">
 
-                            <p class="big-font uppercase">
+                            <div class="owner">
+                                <p class="big-font uppercase">
                                 Albert Janota
                                 <br> ul. Bukietowa 19
                                 <br> 41-403 Chełm Śląski
-                            </p>
+                                </p>
                             <p class="big-font uppercase">
                                 Tel: <strong class="highlight">+48 512-467-763</strong>
                             </p>
+                            </div>
+                            <div class="owner">
                             <p class="big-font uppercase">
                                 Mateusz Bielecki
                                 <br> ul. Mazowiecka 10
                                 <br> 41-200 Sosnowiec
                             </p>
+                            </div>
                             <p class="big-font uppercase">
                                 Nasza szklarnia, na której uprawiamy rośliny owadożerne mieści się w Chełmie Śląskim
                                 przy ulicy Bukietowej 19.
@@ -2117,7 +2082,7 @@
                                         <div class="help-block"></div>
                                     </div>
                                     <div class="col-md-12 form-actions">
-                                        <input class="button" type="submit" value="Send">
+                                        <input class="button" type="submit" value="Wyślij">
                                     </div>
                                 </div>
                             </form>
@@ -2128,7 +2093,11 @@
                     <a class="map-open button background-lite-b border-heading-b heading-b"
                        data-map-overlay=".map-overlay" href="#"><img class="icon icons8-Google-Maps-Filled"
                                                                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEyUlEQVRoQ92aXXIaRxDH/70WvJpUDK/GJwg+QfAJjE/g3RMEPSbgEq5A8mjlBLs6QaQTGJ9A5ASRX8GukFcWb6d62MGjZT8GWNYpUaUqCc3OzK+/u4HwQF70QDjwTUEa/u/tmhO9BHOPQG0A8gMGZgTcMWEaRs7N0vv5rkjg3wREAVB0QYBbdMEYLAjZeZsHVDnI9/5vPYcin0ANGwi9hsHLiB3vs/fLddpzlYI0/YlLBH8fgORaZngLbxAk378H0vBHjRqdXQDUJaBzzIH62YijF5+8N1PRxCPiP8vY8wvTq6RmtiAbiNr7sgCUbTNfLbyhu/GJL7f7mlMWtJhZyOtnS2+01Gu2IE1/ckmEn8qQmN5jxc4zcdCmPw6I6HWZe2sh7YIEk9uStfHXwht2RBt1iv4uEyIpKPl7q5FWMOFMVTJfMTgQW5c1TX/SIaDHQJ8Ij1OfY7yde4PRE3/cd4jenQIkYj7/5A0vC0GY8S+A7sIbzNIukmf72slb/vgaRC/zQOQcBo/WeKRCax2RC8JFITzzzdwb9mxAnmsInYUJaERR9EG00wwmflZSW3H4nThj08JkTcnqy9toUiqAhTt4ngtiOlNG/JeyQZUUaa+5O1Bmm2eyX219A23uY+tb+pxMH2GG0obthkmY/w2IvkhSxdr2kxdPSv5r6J1MifBjrr3HgcFc0/InoyI/Ed9aeANV6mRqZCvRxIa2IHpd07cAkeRJ6Eulq5zdiV6DMSpydmZ8WHiDboGPbExLhVrCrd6UgYAIqqxeRc6VJLxU84ulXEZ9lQVkF34NdadlZmZWCS/OKzvFoI4oqvRB7S4z3xSJPef/OjLmayRRzyjJgnsMahAwXSG81JGmFUwkc+9EMB0wKi1R0sKkSDXk8EUyNJpCysslAK7n7uBV2VoRJw/hdMxGq7BEkUoTyhHXNybQE//XrkOOFJkqs2bb8aaML9NX0hJoIYh5QdEQwEsCqUhR9BI/CrHubk3Qolwp2hNGWWKu3Quk8BBjQRJC/iUmVsfZDERP99lru5b54wrrTpqpnwQkDUJfJjbJ94eAZOWw3Kh1yEHyTB6E3tMma++cn5L9T2ZaeRB6HrBwh+dx7ikuXeKbmhk8S8ClmVYxRDwPiCWr2gJEs6JEaYZa0aQ0a2kwpYDYQsi6zSXIjcufwvGQnpjoUknXgEmYo0H2gZBQLBeo4yxYYe1K9MntIONQq6Id1aTea58EZF8IHTbjTN+TQVtW1t+YVNiOu8xtJ1o6yKEQ2iQEQH7faCWl99gOL1QFsQ3XpYLYQqhwbFGvJbWS0Ma9MVVpIPtAaOnbwJgDQmb8sfAG/bQxaykgh0DYwpgNnC7/0wLB0SDHQNjCtPyx6jzn3rAdR6p/kmH2KJAyIGxgxLxknZhVVtl/MEiZEDYwek1WV3kQyCkgbGGa/nhGRD8cbVqnhLCB2YTks2kSZi+NVAFxKIw1SJUQh8BYg5izItM+T/HRnLl/XtI0Q7E1SNrCU0PYaEaPq4pBJBkRPU32xVVB5MHoPt+cbmb3I3EFKipmjs5lFlU1RBqMQBA579Tnmzl9+/2Pp1PCXVaPXPX7RUONnS8M1FHrM7iXloyqvrw6j/kjQIE5a067R6Vf4TilIB4MyH+RAHpvOfnqjgAAAABJRU5ErkJggg=="
-                                                                     width="25" height="25">Znajdź nas na mapie</a>
+                                                                     width="25" height="25">Pokaż/Ukryj mapę</a>
+                </div>
+                <div id="map" class="hide-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97361.102751208!2d19.141955729919804!3d50.1151825413003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716c044cdca7f59%3A0xdc922aefb2c4e17d!2zQnVraWV0b3dhIDE5LCA0MS00MDMgQ2hlxYJtIMWabMSFc2tp!5e0!3m2!1sen!2spl!4v1477419929420" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </iframe>
                 </div>
                 <br>
                 <!--<div class="social">-->
@@ -2166,7 +2135,7 @@
     <div class="container">
         Parallax.js &copy; 2016 <a href="http://pixelcog.com/">PixelCog Inc.</a> released under <a
             href="https://github.com/pixelcog/parallax.js/blob/master/LICENSE">MIT license</a><br/>
-        All background images taken from WIKIPEDIA are <a
+        Background images taken from WIKIPEDIA are <a
             href="https://en.wikipedia.org/wiki/List_of_carnivorous_plants">public
         domain</a>.
         <br/>
