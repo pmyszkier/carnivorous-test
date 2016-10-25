@@ -565,6 +565,38 @@ h2 img {
 }
 
 
+.scroll-in-animation {
+    opacity: 0;
+}
+
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+
+.fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+}
+
+.scroll-animation.fadeInLeft, .scroll-animation.fadeInRight, .scroll-in-animation.fadeInLeft, .scroll-in-animation.fadeInRight {
+    -webkit-animation-duration: .8s;
+    -moz-animation-duration: .8s;
+    -o-animation-duration: .8s;
+    animation-duration: .8s;
+}
+.android-browser-4_3minus .scroll-animation.fadeInLeft, .android-browser-4_3minus .scroll-animation.fadeInRight, .android-browser-4_3minus .scroll-in-animation.fadeInLeft, .android-browser-4_3minus .scroll-in-animation.fadeInRight {
+    animation-duration: 0s;
+    -webkit-animation-duration: 0s;
+}
+.scroll-in-animation {
+    opacity: 0;
+}
+.scroll-in-animation.css-animation-show {
+    opacity: 1;
+}
+
+
 /*.animate_image {*/
     /*margin:0 auto;*/
     /*width:450px;*/
