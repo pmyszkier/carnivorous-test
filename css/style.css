@@ -329,7 +329,8 @@ h2 img {
 }
 
 .section-four .col-md-2.col-sm-6.col-xs-6:hover {
-    background: lightblue;
+    /*background: lightblue;*/
+    background: #e6e6e6;
 }
 
 /*.margin-top {*/
