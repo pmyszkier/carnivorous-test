@@ -82,12 +82,14 @@ $(document).ready(function () {
 //
         $(this).next().fadeIn();
         $(this).next().addClass('flex');
+        $('.courtain').addClass('courtain-fade');
 
     });
     $(".popup-click").parent().parent().parent().parent().mouseleave(function () {    //wyjechanie z sekcji (przodek popupa) zamyka popupa i usuwa display:flex (wraca do display:none)
 
         $(".popup-click").next().fadeOut();
         $(".popup-click").next().removeClass('flex');
+        $('.courtain').removeClass('courtain-fade');
 
     });
 
@@ -95,6 +97,7 @@ $(document).ready(function () {
 
         $(".popup-click").next().fadeOut();
         $(".popup-click").next().removeClass('flex');
+        $('.courtain').removeClass('courtain-fade');
 
     });
 

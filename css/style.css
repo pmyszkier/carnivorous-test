@@ -2,7 +2,6 @@ body {
     background-color: #f2f2f2;
 }
 
-
 .parallax-window {
     min-height: 400px;
     background: transparent;
@@ -110,7 +109,7 @@ header li {
     cursor: pointer;
 }
 
-li.category>a {
+li.category > a {
     font-weight: bold;
 }
 
@@ -121,15 +120,15 @@ li.category>a {
 /*}*/
 
 /*.products:hover .submenu {*/
-    /*display: inherit;*/
-    /*margin-top: 7px;*/
-    /*margin-left: -4px;*/
+/*display: inherit;*/
+/*margin-top: 7px;*/
+/*margin-left: -4px;*/
 /*}*/
 
 .products:hover .submenu {
-display: inherit;
-/*margin-top: 7px;*/
-/*margin-left: -4px;*/
+    display: inherit;
+    /*margin-top: 7px;*/
+    /*margin-left: -4px;*/
 }
 
 .submenu li:hover .subsubmenu {
@@ -156,12 +155,12 @@ header .shown-submenu {
 }
 
 /*.show {*/
-    /*height: 50px;*/
-    /*!*background: transparent;*!*/
+/*height: 50px;*/
+/*!*background: transparent;*!*/
 /*}*/
 /*.show-mobile {*/
-    /*height: 485px;*/
-    /*!*background: transparent;*!*/
+/*height: 485px;*/
+/*!*background: transparent;*!*/
 /*}*/
 
 .body-margin {
@@ -230,15 +229,11 @@ span.more:hover {
     color: lightgrey;
 }
 
-
-
 ul.show-subsubmenu, ul.show-submenu {
     display: inherit;
 }
 
-
 /********************/
-
 
 /********************/
 
@@ -338,7 +333,6 @@ section.section-zero {
 .section-three ul span {
     font-weight: 700;
 }
-
 
 .section-five img.icons8-Facebook-Filled {
     margin-bottom: 10px;
@@ -473,15 +467,12 @@ h2 img {
     max-height: 70vh;
 }
 
-
 .section-five .text-center img:hover {
     background-image: url("../img/carnisana-tlo.jpg");
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
 }
-
-
 
 .section-five p.title {
     text-align: center;
@@ -506,7 +497,6 @@ h2 img {
     cursor: pointer;
 
 }
-
 
 .section-six input, .section-six textarea {
     width: 100%;
@@ -538,8 +528,6 @@ h2 img {
     padding-top: 15px;
 }
 
-
-
 .big-font strong {
     color: #16a085;
 }
@@ -551,7 +539,6 @@ h2 img {
 .show-map {
     display: inherit;
 }
-
 
 @media (min-width: 768px) and (max-width: 991px) {
     .section-five .text-center img {
@@ -572,6 +559,7 @@ h2 img {
         /*height: 0px !important;*/
         display: none;
     }
+
     .row-header {
         display: flex !important;
         justify-content: center !important;
@@ -581,9 +569,10 @@ h2 img {
 
     header ul {
         display: table-caption;
-        width:100%;
+        width: 100%;
         /* width: 100%; */
     }
+
     header li {
         /*min-width: 300px;*/
         width: 100%;
@@ -647,6 +636,7 @@ h2 img {
     .diamond {
         display: none;
     }
+
     header ul.submenu {
         position: relative;
     }
@@ -703,15 +693,15 @@ h2 img {
     }
 
     /*section {*/
-        /*padding-bottom: 0;*/
-        /*padding-top: 0;*/
+    /*padding-bottom: 0;*/
+    /*padding-top: 0;*/
     /*}*/
-
     .popup-window {
         width: 94vw;
         padding: 10px;
         max-height: 550px;
     }
+
     .popup-window p.description {
         font-size: 14px;
         line-height: 18px;
@@ -723,6 +713,7 @@ h2 img {
         margin-top: 4px;
         margin-left: 0;
     }
+
     .subsubmenu {
         position: relative;
         padding-top: 0;
@@ -730,7 +721,6 @@ h2 img {
     }
 
 }
-
 
 .absolute {
     position: absolute;
@@ -740,3 +730,46 @@ h2 img {
     right: 0;
     margin: auto;
 }
+
+
+@keyframes pulse {
+    0% {
+        opacity: 0.2;
+    }
+    20% {
+        opacity: 0.97;
+    }
+    90% {
+        opacity: 0.97;
+    }
+    100% {
+        opacity: 0.2;
+    }
+
+}
+
+/*@keyframes change_color*/
+/*{*/
+    /*0% { background-color:white; } !* 0% oznacza początek animacji *!*/
+    /*!*25% { background-color:gold; } !* 25% oznacza 3-cią sekundę, bo 25% z 12s, to 3s *!*!*/
+    /*50% { background-color:grey; } !* 50% oznacza 6-stą sekundę, bo 50% z 12s, to 6s *!*/
+    /*!*75% { background-color:green; } !* 75% oznacza 9-tą sekundę, bo 75% z 12s, to 9s *!*!*/
+    /*100% { background-color:white; } !* 100% oznacza koniec animacji *!*/
+/*}*/
+
+.courtain-fade {
+    /*display: none;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background: white;
+    /*opacity: 1.0;*/
+    /*animation-name: pulse, change_color ;*/
+    /*animation-duration: 5s;*/
+    animation: pulse 15s infinite;
+    /*animation: pulse 5s infinite, change_color 5s 5s infinite;*/
+}
+
