@@ -184,8 +184,7 @@ $(document).ready(function () {
     if ($(window).width() <= 991) { // warunek dla ekranów o zakładanej szerokości
         $(".mobile-menu").click(function () {
 
-            $(this).siblings().toggle();
-            // $(".popup-click").next().removeClass('flex')();
+            $(this).siblings().toggle(); //kliknięcie mobile menu rozwija i zwija podmenu
 
         });
 
@@ -215,21 +214,43 @@ $(document).ready(function () {
 
     }
 
-    $(".section-five .overlay img").mouseover(function () { //poruszanie obrazkami w galerii
+    $(".section-five .overlay img").mouseover(function () { //poruszanie obrazkami w galerii przy najechaniu myszą
         // $(this).css('transform','rotate(7deg)');
         $(this).addClass('img-transform');
 
         });
-
-    $(".section-five .overlay img").mouseleave(function () {
+    $(".section-five .overlay img").mouseleave(function () { //po zjechaniu myszą obrazki w galerii wracają do stanu poprzedniego
         // $(this).css('transform','rotate(0deg)');
         $(this).removeClass('img-transform');
     });
 
-    $(".text-center").click(function () {
-        // $(this).css('transform','rotate(0deg)');
+    $(".text-center").click(function () { // obsługiwanie pokazywania i ukrywania mapy
         $('.hide-map').toggleClass('show-map');
     });
+
+    $(".products").click(function () { // kiknięcie pozycji menu pokazuje jego podmenu
+        $(this).find('.submenu').addClass('show-submenu');
+    });
+
+    $(document).click(function (event) {  //Kliknięcie poza DIVem o klasie .menu zamyka submenu i subsubmenu
+        if ($(event.target).closest(".menu").length === 0) {
+            console.log("Kliknięto poza DIVem o klasie .menu");
+            $('.submenu').removeClass('show-submenu');
+            $('.subsubmenu').removeClass('show-subsubmenu');
+        }
+    });
+
+
+    $("li.category").click(function () { // kiknięcie pozycji submenu pokazuje jego subsubmenu
+
+        if ($(this).find('.subsubmenu').hasClass('show-subsubmenu')==false) {
+        $('.subsubmenu').removeClass('show-subsubmenu');
+        $(this).find('.subsubmenu').addClass('show-subsubmenu');
+        } else {
+            $('.subsubmenu').removeClass('show-subsubmenu');
+        }
+    });
+
 
 });
 

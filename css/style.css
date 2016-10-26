@@ -1,4 +1,6 @@
-
+body {
+    background-color: #f2f2f2;
+}
 
 
 .parallax-window {
@@ -119,21 +121,35 @@ li.category>a {
 /*margin-left: -90px;*/
 /*}*/
 
+/*.products:hover .submenu {*/
+    /*display: inherit;*/
+    /*margin-top: 7px;*/
+    /*margin-left: -4px;*/
+/*}*/
+
 .products:hover .submenu {
+display: inherit;
+/*margin-top: 7px;*/
+/*margin-left: -4px;*/
+}
+
+.submenu li:hover .subsubmenu {
     display: inherit;
-    margin-top: 7px;
-    margin-left: -4px;
+    /*margin-top: 7px;*/
+    /*margin-left: -4px;*/
 }
 
 header .submenu {
     display: none;
-    width: 325px;
+    width: 280px;
     position: absolute;
     /* color: red; */
     background: black;
-    margin-top: 15px;
     padding: 10px;
-    margin-left: -20px;
+    /*margin-top: 7px;*/
+    /*margin-left: -5px;*/
+    margin-top: 0px;
+    margin-left: -10px;
 }
 
 header .shown-submenu {
@@ -159,15 +175,21 @@ header .shown-submenu {
     left: 45px;
     width: 10px;
     height: 10px;
-    background: black;
+    /*background: black;*/
+    background: grey;
     -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
+.diamond2 {
+    top: 18px;
+    left: -5px;
+}
+
 .row-header ul li ul li {
     display: block;
-     width: 298px;
+    width: 270px;
     /* float: left; */
     text-align: left;
     text-transform: initial;
@@ -186,17 +208,33 @@ header .shown-submenu {
 span.more {
     float: right;
     font-weight: bold;
+    padding-right: 10px;
+}
+
+span.more:hover {
+    color: grey;
 }
 
 .subsubmenu {
-    /* display: none; */
+    display: none;
     width: 325px;
     position: absolute;
     /* color: red; */
     background: black;
     margin-top: -35px;
     padding: 10px;
-    margin-left: 310px;
+    /*margin-left: 272px;*/
+    margin-left: 265px;
+}
+
+.subsubmenu a {
+    color: lightgrey;
+}
+
+
+
+ul.show-subsubmenu, ul.show-submenu {
+    display: inherit;
 }
 
 
@@ -282,6 +320,10 @@ input.submit {
     text-decoration: none;
     padding: 0 6px;
     margin-left: 8px;
+}
+
+.icons {
+    display: inline-block;
 }
 
 section.section-zero {
@@ -587,39 +629,138 @@ h2 img {
         min-height: 350px;
     }
 
+    .mobile-menu span {
+        float: left;
+    }
+
+    .popup-window {
+        width: 94vw;
+        padding: 10px;
+        max-height: 600px;
+    }
+
+    .popup-window p.description {
+        overflow: scroll;
+    }
+
+    .diamond {
+        display: none;
+    }
+    header ul.submenu {
+        position: relative;
+    }
+
+    ul.show-subsubmenu, ul.show-submenu {
+        display: none;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .h2, h2 {
+        font-size: 25px;
+    }
+
+    h2.container-title {
+        font-size: 30px;
+    }
+
+    .h3, h3 {
+        font-size: 20px;
+    }
+
+    #cookie-bar p {
+        float: left;
+        font-size: 12px;
+        padding-left: 5px;
+    }
+
+    .pusta-miska img {
+        width: 100%;
+    }
+
+    #lang-selector img {
+        padding: 12px 0;
+        width: 25px;
+    }
+
+    .section-four .col-md-2.col-sm-6.col-xs-6 {
+        min-height: 450px;
+    }
+
+    .section-five .col-md-2.col-sm-6.col-xs-6 {
+        min-height: 260px;
+    }
+
+    .section-four p.heading-b {
+        font-size: 18px;
+    }
+
+    .icons {
+        display: inherit;
+        padding-top: 10px;
+    }
+
+    section {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .popup-window {
+        width: 94vw;
+        padding: 10px;
+        max-height: 550px;
+    }
+    .popup-window p.description {
+        font-size: 14px;
+        line-height: 18px;
+        overflow: scroll;
+    }
+
+    .submenu li:hover .subsubmenu {
+        display: inherit;
+        margin-top: 4px;
+        margin-left: 0;
+    }
+    .subsubmenu {
+        position: relative;
+        padding-top: 0;
+        /*padding-bottom: 20px;*/
+    }
+
 }
 
 
-.scroll-in-animation {
-    opacity: 0;
-}
+/*.scroll-in-animation {*/
+    /*opacity: 0;*/
+/*}*/
 
-.fadeInRight {
-    -webkit-animation-name: fadeInRight;
-    animation-name: fadeInRight;
-}
+/*.fadeInRight {*/
+    /*-webkit-animation-name: fadeInRight;*/
+    /*animation-name: fadeInRight;*/
+/*}*/
 
-.fadeInLeft {
-    -webkit-animation-name: fadeInLeft;
-    animation-name: fadeInLeft;
-}
+/*.fadeInLeft {*/
+    /*-webkit-animation-name: fadeInLeft;*/
+    /*animation-name: fadeInLeft;*/
+/*}*/
 
-.scroll-animation.fadeInLeft, .scroll-animation.fadeInRight, .scroll-in-animation.fadeInLeft, .scroll-in-animation.fadeInRight {
-    -webkit-animation-duration: .8s;
-    -moz-animation-duration: .8s;
-    -o-animation-duration: .8s;
-    animation-duration: .8s;
-}
-.android-browser-4_3minus .scroll-animation.fadeInLeft, .android-browser-4_3minus .scroll-animation.fadeInRight, .android-browser-4_3minus .scroll-in-animation.fadeInLeft, .android-browser-4_3minus .scroll-in-animation.fadeInRight {
-    animation-duration: 0s;
-    -webkit-animation-duration: 0s;
-}
-.scroll-in-animation {
-    opacity: 0;
-}
-.scroll-in-animation.css-animation-show {
-    opacity: 1;
-}
+/*.scroll-animation.fadeInLeft, .scroll-animation.fadeInRight, .scroll-in-animation.fadeInLeft, .scroll-in-animation.fadeInRight {*/
+    /*-webkit-animation-duration: .8s;*/
+    /*-moz-animation-duration: .8s;*/
+    /*-o-animation-duration: .8s;*/
+    /*animation-duration: .8s;*/
+/*}*/
+/*.android-browser-4_3minus .scroll-animation.fadeInLeft, .android-browser-4_3minus .scroll-animation.fadeInRight, .android-browser-4_3minus .scroll-in-animation.fadeInLeft, .android-browser-4_3minus .scroll-in-animation.fadeInRight {*/
+    /*animation-duration: 0s;*/
+    /*-webkit-animation-duration: 0s;*/
+/*}*/
+/*.scroll-in-animation {*/
+    /*opacity: 0;*/
+/*}*/
+/*.scroll-in-animation.css-animation-show {*/
+    /*opacity: 1;*/
+/*}*/
 
 
 /*.animate_image {*/
