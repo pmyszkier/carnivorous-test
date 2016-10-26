@@ -4,11 +4,6 @@
 
 $(document).ready(function () {
 
-    //     Punkt 2
-// Przygotuj do pracy plik JavaScript. Dopisz event odpowiedzialny za sprawdzenie, czy DOM został załadowany,
-//     i sprawdź, czy działa (np. przez wyświetlenie w konsoli napisu "Działa"):
-    console.log('Działa');
-
     // Punkt 3
 // Znajdź następujące elementy i zapisz je do zmiennych:
 //     Element nav, który będzie nam potrzebny do tego, aby po wyciągnięciu menu nie podskakiwała nam cała treść do góry.
@@ -17,22 +12,23 @@ $(document).ready(function () {
 //     Zmienna przechowująca pozycję (top) elementu o klasie menu.
 //     Sprawdź, czy wyszukałeś odpowiednie elementy i czy ich liczba się zgadza.
 //     Wypisz zmienne w konsoli, żeby upewnić się, czy zawierają poprawne dane:
-    var nav = $('nav');
+
+    var nav = $('nav');  //element zaraz nad ul.menu w drzewie DOM
     console.log(nav);
-    var ulMenu = $('.menu');
+    var ulMenu = $('.menu');  // menu jako lista nieuporządkowana
     console.log(ulMenu);
     var topValue = 0;
-    var menuTopValue = ulMenu.css('top');
+    var menuTopValue = ulMenu.css('top'); //
     console.log(menuTopValue);
     var header = $('header');
 
     //     Punkt 4
 // Ustaw na elemencie window event reagujący na skrolowanie. Sprawdź, czy działa:
-
+    var stickyNavTop = Math.round($('nav').offset().top); // pozycja elementu nav względem góry okna ( dla desktop 255px)
     $(window).on('scroll', function (e) {  //skrolowanie na window, może też być document
         // console.log('scrollowanie');
-        var scrollTop = $(window).scrollTop();  // !!!pozycja przewijania okna reagująca na scroll
-        // console.log(scrollTop);
+        var scrollTop = $(window).scrollTop();  // !!! pozycja przewijania góry strony względem góry okna (reaguje na scroll)
+        console.log(scrollTop);
 
         //     Punkt 5
 // Podczas skrolowania sprawdź, kiedy przyczepić menu do górnej belki. Stwórz zmienną i pobierz do niej liczbę pikseli,
@@ -42,40 +38,37 @@ $(document).ready(function () {
 //         var topPositionMenu = ulMenu.offset().top; // !!! zwraca top (lub left) pozycji elementu
 //         console.log(topPositionMenu);
 
-        // var stickyNavTop = $('nav').offset().top; // pozycja elementu nav
-        // console.log(stickyNavTop);
-        // // var stickyNav = function(){
-        // //     var scrollTop = $(window).scrollTop();  // !!!pozycja przewijania okna
-        // //     console.log(scrollTop);
-        //
-        // if (scrollTop > stickyNavTop) {
-        //     ulMenu.addClass('sticky'); //przyczepiay menu do góry okna
-        // } else {
-        //     ulMenu.removeClass('sticky');
-        // }
+        // var stickyNavTop = Math.round($('nav').offset().top); // pozycja elementu nav względem góry okna (255px)
+        console.log(stickyNavTop);
 
-
-        var headerTop = $('header').offset().top; // pozycja elementu nav
-        console.log(headerTop);
-        // var stickyNav = function(){
-        var scrollTop = $(window).scrollTop();  // !!!pozycja przewijania okna
-            console.log(scrollTop);
-
-        if (scrollTop > headerTop) {
-            nav.addClass('sticky'); //przyczepiamy menu do góry okna
+        if (scrollTop > stickyNavTop) {
+            ulMenu.addClass('sticky'); //przyczepiay menu do góry okna
         } else {
-            nav.removeClass('sticky');
+            ulMenu.removeClass('sticky');
         }
 
+
+        // var headerTop = $('header').offset().top; // pozycja elementu nav
+        // console.log(headerTop);
+        // // var stickyNav = function(){
+        // var scrollTop = $(window).scrollTop();  // !!!pozycja przewijania okna
+        //     console.log(scrollTop);
+        //
+        // if (scrollTop > headerTop) {
+        //     nav.addClass('sticky'); //przyczepiamy menu do góry okna
+        // } else {
+        //     nav.removeClass('sticky');
+        // }
+
     });
 
-    //     Punkt 6
-// Ustaw na elemencie window kolejny event reagujący na zmianę szerokości okna. Sprawdź, czy działa.
-    $(window).on('resize', function (e) {
-        var stickyNavTop = $('nav').offset().top; // pozycja elementu nav reagująca na
-        console.log(stickyNavTop);
-        // var resizeTop = $(window).resizeTop();  // !!!pozycja przewijania okna reagująca na resize
-    });
+//     //     Punkt 6
+// // Ustaw na elemencie window kolejny event reagujący na zmianę szerokości okna. Sprawdź, czy działa.
+//     $(window).on('resize', function (e) {
+//         var stickyNavTop = $('nav').offset().top; // pozycja elementu nav reagująca na
+//         console.log(stickyNavTop);
+//         // var resizeTop = $(window).resizeTop();  // !!!pozycja przewijania okna reagująca na resize
+//     });
 
 
     // Zadanie 2
@@ -87,10 +80,10 @@ $(document).ready(function () {
 //     Jeśli ktoś kliknie w link Blog nhash; strona ma się przesuwać się do paragrafu o id blog itp.
 //     Wskazówka: skorzystaj z pomocy StackOverFlow :)
     var a = $('a');
-    var additionalDiv = $('.additional'); //dodatkowy box zatrzymujący sekcję 1 pod menu
+    // var additionalDiv = $('.additional'); //dodatkowy box zatrzymujący sekcję 1 pod menu-skasować
 
     a.on('click', function (e) {
-        var href = $(this).attr('href'); // pobranie wartości id dla href czyli id dalej położonego nagłówka
+        var href = $(this).attr('href'); // pobranie wartości id dla href pozycji menu czyli id dalej położonej sekcji
         console.log(href);
         // $('#href').addClass('margin-top');
         // var p = $(href).position();
@@ -101,50 +94,40 @@ $(document).ready(function () {
 
 
         var scrollTop = $(window).scrollTop();
-        $('html,body').animate({
-            scrollTop: $(href).offset().top //przewijanie strony przez 2 sekundy, aby nagłówek o wywołanym id przewijał się do góry
-        }, 2000);
-        if ($(window).width() > 991) {
-            if (scrollTop < 255) {
-                // $('body').addClass('body-margin');
-                // additionalDiv.addClass('show');  //DO ZMIANY PÓŹNIEJ
+        var menuHeight = $('.menu').height();  // wysokość elementu menu (o tyle musimy obniżyć wjazd sekcji na górę
+        console.log(menuHeight);
 
-                $('html,body').animate({
-                    scrollTop: $(href).offset().top //przewijanie strony przez 2 sekundy, aby nagłówek o wywołanym id przewijał się do góry
-                }, 2000);
-                scrollTop = scrollTop - 50;
+        // $('html,body').animate({
+        //     scrollTop: $(href).offset().top //przewijanie strony przez 2 sekundy, aby nagłówek o wywołanym id przewijał się do góry
+        // }, 2000);
+
+            if (scrollTop < stickyNavTop) {
+                console.log(scrollTop);
+                console.log($(href).offset().top);  // pozycja wywoływanego section względem góry strony
+
+                if ($(window).width() > 991) { // dla desktopu
+                    $('html,body').animate({
+                        scrollTop: ($(href).offset().top - menuHeight - 50) //przewijanie strony przez 2 sekundy, aby nagłówek o wywołanym id przewijał się do góry, 50 to jest wysokość menu na desktop
+                    }, 2000);
+                } else {                 // dla mobile
+                    $('html,body').animate({
+                        scrollTop: ($(href).offset().top - menuHeight) //przewijanie strony przez 2 sekundy, aby nagłówek o wywołanym id przewijał się do góry
+                    }, 2000);
+                }
+
             } else {
                 // $('body').removeClass('body-margin');
-                additionalDiv.removeClass('show');  //DO ZMIANY PÓŹNIEJ
+                // additionalDiv.removeClass('show');  //DO ZMIANY PÓŹNIEJ
                 $('html,body').animate({
                     scrollTop: $(href).offset().top //przewijanie strony przez 2 sekundy, aby nagłówek o wywołanym id przewijał się do góry
                 }, 2000);
             }
-        }
-        // else {
-        //     if (scrollTop < 485) {
-        //         additionalDiv.addClass('show-mobile');  //DO ZMIANY PÓŹNIEJ
-        //         $('html,body').animate({
-        //             scrollTop: $(href).offset().top //przewijanie strony przez 2 sekundy, aby nagłówek o wywołanym id przewijał się do góry
-        //         }, 2000);
-        //
-        //     } else {
-        //         additionalDiv.removeClass('show-mobile');  //DO ZMIANY PÓŹNIEJ
-        //         $('html,body').animate({
-        //             scrollTop: $(href).offset().top //przewijanie strony przez 2 sekundy, aby nagłówek o wywołanym id przewijał się do góry
-        //         }, 2000);
-        //     }
-        //
-        // }
-
-
-
 
     });
 
 
 
-    $(".popup-click").click(function () {
+    $(".popup-click").click(function () {   //kliknięcie na blok popupa otwiera popupa (display zamiast none jest teraz flex)
 
         // var tresc = jQuery(this).attr("name");
         //
@@ -154,19 +137,15 @@ $(document).ready(function () {
         $(this).next().addClass('flex');
 
     });
-    $(".popup-click").parent().parent().parent().parent().mouseleave(function () {
+    $(".popup-click").parent().parent().parent().parent().mouseleave(function () {    //wyjechanie z sekcji (przodek popupa) zamyka popupa i usuwa display:flex (wraca do display:none)
 
         $(".popup-click").next().fadeOut();
         $(".popup-click").next().removeClass('flex');
 
     });
 
-    $(".popup-click").next().click(function () {
+    $(".popup-click").next().click(function () {  //kliknięcie na okno popupa zamyka go i usuwa display:flex (wraca do display:none)
 
-        // var tresc = jQuery(this).attr("name");
-        //
-        // jQuery("#popup").html(tresc);
-//
         $(".popup-click").next().fadeOut();
         $(".popup-click").next().removeClass('flex');
 
@@ -188,9 +167,10 @@ $(document).ready(function () {
 
         });
 
-        $(".li-menu").click(function () {
+        $(".li-menu").click(function () {  //kliknięcie pozycji menu chowa wszystkie pozycje menu (z wyjątkiem
 
             $(".li-menu").hide();
+            $(".products").hide();
             $(".mobile-menu").show();
 
             // if (scrollTop < 500){

@@ -87,7 +87,7 @@ header {
 
 .row-header > ul > li {
     display: inline;
-    padding: 0 10px;
+    padding: 0 9px;
     color: white;
     text-transform: uppercase;
     font-size: 14px;
@@ -101,7 +101,7 @@ header {
 
 header .row > ul {
     /*width: 1048px;*/
-    max-width: 1170px;
+    /*max-width: 1170px;*/
     margin: 0 auto;
     padding: 0;
 }
@@ -156,14 +156,14 @@ header .shown-submenu {
     display: inherit;
 }
 
-.show {
-    height: 50px;
-    /*background: transparent;*/
-}
-.show-mobile {
-    height: 485px;
-    /*background: transparent;*/
-}
+/*.show {*/
+    /*height: 50px;*/
+    /*!*background: transparent;*!*/
+/*}*/
+/*.show-mobile {*/
+    /*height: 485px;*/
+    /*!*background: transparent;*!*/
+/*}*/
 
 .body-margin {
     margin-top: 50px;
@@ -267,6 +267,8 @@ input.submit {
     /*left: 0;*/
     margin: 0 auto;
     background: black;
+    width: 100%;
+    z-index: 10;
 }
 
 /*For video section*/
@@ -432,9 +434,9 @@ h2 img {
 
 .flex {
     display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    flex-direction: column !important;
+    /*justify-content: center !important;*/
+    /*align-items: center !important;*/
+    /*flex-direction: column !important;*/
 }
 
 .popup-window p.heading-b {
@@ -702,8 +704,8 @@ h2 img {
     }
 
     section {
-        padding-bottom: 0;
-        padding-top: 0;
+        /*padding-bottom: 0;*/
+        /*padding-top: 0;*/
     }
 
     .popup-window {
