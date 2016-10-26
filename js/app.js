@@ -264,3 +264,4 @@ $(document).ready(function () {
 // pobierz odległość od górnej belki dla elementu nav.
 //     Punkt 8
 // Sprawdź, jak działa Twoja strona. Czy widzisz problemy? Napisz.
+

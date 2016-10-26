@@ -1,3 +1,6 @@
+
+
+
 .parallax-window {
     min-height: 400px;
     background: transparent;
@@ -106,9 +109,25 @@ header li {
     cursor: pointer;
 }
 
+li.category>a {
+    font-weight: bold;
+}
+
+/*.gallery:hover .submenu {*/
+/*display: inherit;*/
+/*margin-top: 66px;*/
+/*margin-left: -90px;*/
+/*}*/
+
+.products:hover .submenu {
+    display: inherit;
+    margin-top: 7px;
+    margin-left: -4px;
+}
+
 header .submenu {
     display: none;
-    width: 100px;
+    width: 325px;
     position: absolute;
     /* color: red; */
     background: black;
@@ -148,9 +167,9 @@ header .shown-submenu {
 
 .row-header ul li ul li {
     display: block;
-    /* width: 97px; */
+     width: 298px;
     /* float: left; */
-    /* text-align: left; */
+    text-align: left;
     text-transform: initial;
     font-weight: normal;
     font-size: 15px;
@@ -164,23 +183,25 @@ header .shown-submenu {
     color: white;
 }
 
-/********************/
-.gallery:hover .submenu {
-    display: inherit;
-    margin-top: 66px;
-    margin-left: -90px;
+span.more {
+    float: right;
+    font-weight: bold;
 }
 
-header .submenu {
-    display: none;
-    width: 100px;
+.subsubmenu {
+    /* display: none; */
+    width: 325px;
     position: absolute;
     /* color: red; */
     background: black;
-    margin-top: 15px;
+    margin-top: -35px;
     padding: 10px;
-    margin-left: -20px;
+    margin-left: 310px;
 }
+
+
+/********************/
+
 
 /********************/
 
@@ -613,3 +634,11 @@ h2 img {
     /*background-image:url("/img/carnisana-tlo.jpg");*/
 /*}*/
 
+.absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
