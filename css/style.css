@@ -73,6 +73,18 @@ header {
     line-height: 20px;
 }
 
+.header-background {
+    width: 100vw;
+    position: absolute;
+    /*left: 0;*/
+    /*right: 0;*/
+    margin: 0 auto;
+    /*top:0;*/
+    height: 50px;
+    background-color: black;
+    z-index: -1;
+}
+
 .row-header {
     /* width: 60%; */
     /* margin: 0 auto; */
@@ -80,7 +92,7 @@ header {
     /*width: 1048px;*/
     width: 100%;
     margin: 0 auto;
-    z-index: 100;
+    z-index: 101;
 }
 
 .row-header > ul > li {
@@ -100,8 +112,10 @@ header {
 header .row > ul {
     /*width: 1048px;*/
     /*max-width: 1170px;*/
+    max-width: 1170px;
+    left: 0;
+    right: 0;
     margin: 0 auto;
-    padding: 0;
 }
 
 header li {
@@ -147,7 +161,7 @@ header .submenu {
     /*margin-top: 7px;*/
     /*margin-left: -5px;*/
     margin-top: 0px;
-    margin-left: -10px;
+    margin-left: -9px;
 }
 
 header .shown-submenu {
