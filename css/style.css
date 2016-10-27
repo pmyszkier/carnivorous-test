@@ -787,3 +787,25 @@ h2 img {
     width: 20px;
 }
 
+.remove-transform {
+    /*transform: perspective(2500px) rotateY(0);*/
+    /*transform: perspective(2500px) rotateY(-100deg);*/
+    transform: none !important;
+}
+
+/*[data-aos=flip-left].aos-animate {*/
+     /*transform: perspective(2500px) rotateY(0);*/
+/*}*/
+
+/*[data-aos=flip-left] {*/
+    /*transform: perspective(2500px) rotateY(-100deg);*/
+/*}*/
+
+/*[data-aos=flip-right].aos-animate {*/
+    /*transform: perspective(2500px) rotateY(0);*/
+/*}*/
+
+/*[data-aos=flip-right] {*/
+    /*transform: perspective(2500px) rotateY(100deg);*/
+/*}*/
+

@@ -100,7 +100,7 @@ $(document).ready(function () {
 
 
 // 3. Otwieranie i zamykanie popupów w sekcjach Uprawa i Galeria:
-
+var attribute; // ustawiamy tę zmienną dla obsługi atrybutu data-os
     $(".popup-click").click(function () {   //kliknięcie na blok popupa otwiera popupa (display zamiast none jest teraz flex)
 
         // var tresc = jQuery(this).attr("name");
@@ -110,13 +110,18 @@ $(document).ready(function () {
         $(this).next().fadeIn();
         $(this).next().addClass('flex');
         $('.courtain').addClass('courtain-fade');
+        attribute = $(this).parent().attr('data-aos');
+        console.log(attribute);
+        $(this).parent().removeAttr('data-aos');  //trzeba to zrobić bo animacja aos-master zakłóca centrowanie popupa
 
     });
+    //Tę funkcjonalność na razie wstzrymujemy:
     // $(".popup-click").parent().parent().parent().parent().mouseleave(function () {    //wyjechanie z sekcji (przodek popupa) zamyka popupa i usuwa display:flex (wraca do display:none)
     //
     //     $(".popup-click").next().fadeOut();
     //     $(".popup-click").next().removeClass('flex');
     //     $('.courtain').removeClass('courtain-fade');
+    //     $(this).find('.aos').attr("data-aos",attribute); // przywrócenie atrybutu
     //
     // });
 
@@ -125,6 +130,7 @@ $(document).ready(function () {
         $(".popup-click").next().fadeOut();
         $(".popup-click").next().removeClass('flex');
         $('.courtain').removeClass('courtain-fade');
+        $(this).parent().attr("data-aos",attribute);  //przywrócenie atrybutu
 
     });
 
