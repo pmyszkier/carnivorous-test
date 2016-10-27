@@ -53,8 +53,10 @@ $(document).ready(function () {
 
         if (scrollTop > stickyNavTop) {
             ulMenu.addClass('sticky'); //przyczepiay menu do góry okna
+            $('.header-background').addClass('sticky');
         } else {
             ulMenu.removeClass('sticky');
+            $('.header-background').removeClass('sticky');
         }
 
     });
