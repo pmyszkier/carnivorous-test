@@ -541,6 +541,8 @@ h2 img {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
+
     .section-five .text-center img {
         /*height: 250px;*/
         height: 30vw;
@@ -555,6 +557,11 @@ h2 img {
 }
 
 @media (max-width: 991px) {
+    header .row-header .menu li {
+        display: none;
+    }
+
+
     .parallax-container {
         /*height: 0px !important;*/
         display: none;
@@ -736,14 +743,14 @@ h2 img {
     0% {
         opacity: 0.2;
     }
-    20% {
-        opacity: 0.97;
-    }
-    90% {
-        opacity: 0.97;
-    }
+    /*20% {*/
+        /*opacity: 0.50;*/
+    /*}*/
+    /*90% {*/
+        /*opacity: 0.80;*/
+    /*}*/
     100% {
-        opacity: 0.2;
+        opacity: 0.90;
     }
 
 }
@@ -766,10 +773,10 @@ h2 img {
     height: 100vh;
     z-index: 2;
     background: white;
-    /*opacity: 1.0;*/
+    opacity: 0.9;
     /*animation-name: pulse, change_color ;*/
     /*animation-duration: 5s;*/
-    animation: pulse 15s infinite;
+    animation: pulse 5s;
     /*animation: pulse 5s infinite, change_color 5s 5s infinite;*/
 }
 
