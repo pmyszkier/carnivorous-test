@@ -2,7 +2,34 @@
  * Created by piotr on 10.10.2016.
  */
 
+
+
+
 $(document).ready(function () {
+
+
+// 8. Animacja 3 ze strony: http://grafmag.pl/artykuly/animacje-na-stronie-podczas-przewijania-okna/ :
+//         Animacja wykonana na elementach fadeInLeft i fadeInRight oraz popup-click.sr = ScrollReveal();
+//         (kod bazowy w katalogu scrollreveal-master a wywołanie kodu w app.js):
+
+    $.getScript( "./scrollreveal-master/dist/scrollreveal.min.js", function() {
+        window.sr = ScrollReveal();
+        sr.reveal('.section-five .popup-click', {
+            reset: true,
+            delay: 300,
+            distance: 0
+        });
+        // sr.reveal('.fadeInRight', {
+        //     reset: true,
+        //     delay: 300
+        // });
+
+        // sr.reveal('.section-four .row div', { duration: 2000, delay: 3200 }, 1);
+    });
+
+
+
+
 
 
 // 1. Wykonanie sticky-menu
