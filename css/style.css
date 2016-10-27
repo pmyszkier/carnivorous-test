@@ -780,3 +780,10 @@ h2 img {
     /*animation: pulse 5s infinite, change_color 5s 5s infinite;*/
 }
 
+/***********************/
+/*STRONA PRODUKTY:*/
+
+#produkty .overlay img {
+    width: 20px;
+}
+
