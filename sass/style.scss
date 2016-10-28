@@ -815,12 +815,7 @@ h2 img {
   /*animation: pulse 5s infinite, change_color 5s 5s infinite;*/
 }
 
-/***********************/
-/*STRONA PRODUKTY:*/
 
-#produkty .overlay img {
-  width: 20px;
-}
 
 .remove-transform {
   /*transform: perspective(2500px) rotateY(0);*/
@@ -863,4 +858,40 @@ section.section-one {
 }
 .empty {
   height: 0 !important;
+}
+
+
+/***********************/
+/*STRONA PRODUKTY:*/
+
+#produkty .popup-click .hover-overlay>img {
+  width: 20px !important;
+}
+
+#produkty .overlay img.product {
+  width: 150px;
+  height: 150px;
+}
+#produkty p.price {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#produkty img.cart-icon {
+  width: 40px;
+}
+
+#produkty p.cart {
+  color: red;
+  /* font-weight: bold; */
+  text-align: center;
+}
+
+#produkty .product-name {
+  min-height: 100px;
+}
+
+#produkty .section-four p.title {
+  min-height: 50px;
 }
