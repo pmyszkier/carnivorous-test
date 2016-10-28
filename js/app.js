@@ -67,7 +67,7 @@ $(document).ready(function () {
         var href = $(this).attr('href'); // pobranie wartości id dla href pozycji menu czyli id dalej położonej sekcji
         console.log(href);
 
-        e.preventDefault(); // zapobiegnięcie przeładowaniu strony
+        // e.preventDefault(); // zapobiegnięcie przeładowaniu strony
 
         var scrollTop = $(window).scrollTop();
         var menuHeight = $('.menu').height();  // wysokość elementu menu (o tyle musimy obniżyć wjazd sekcji na górę
@@ -175,6 +175,15 @@ var attribute; // ustawiamy tę zmienną dla obsługi atrybutu data-os
             $('.subsubmenu').removeClass('show-subsubmenu');
         }
     });
+
+    // $('li.subcategory').click(function () { // kiknięcie pozycji submenu pokazuje jego subsubmenu
+    //
+    //     // if ($('ul.submenu')) {
+    //         $(this).parent().parent().parent().removeClass('show-submenu');
+    //     // } else {
+    //
+    //     // }
+    // });
 
 
 

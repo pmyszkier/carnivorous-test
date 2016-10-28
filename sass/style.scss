@@ -1,5 +1,27 @@
+
 body {
   background-color: #f2f2f2;
+  font-size: 12px;
+}
+
+@media (max-width: 991px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+.h2, h2 {
+  //font-size: 25px;
+  font-size: 2em;
+}
+
+h2.container-title {
+  font-size: 30px;
+}
+
+.h3, h3 {
+  //font-size: 20px;
+  font-size: 1.6em;
 }
 
 .parallax-window {
@@ -556,7 +578,6 @@ h2 img {
 
 @media (min-width: 768px) and (max-width: 991px) {
 
-
   .section-five .text-center img {
     /*height: 250px;*/
     height: 30vw;
@@ -571,10 +592,9 @@ h2 img {
 }
 
 @media (max-width: 991px) {
-  header .row-header .menu li {
-    display: none;
+  header .row-header .menu > li {
+    //display: none;
   }
-
 
   .parallax-container {
     /*height: 0px !important;*/
@@ -669,17 +689,19 @@ h2 img {
 }
 
 @media (max-width: 500px) {
-  .h2, h2 {
-    font-size: 25px;
-  }
-
-  h2.container-title {
-    font-size: 30px;
-  }
-
-  .h3, h3 {
-    font-size: 20px;
-  }
+  //.h2, h2 {
+  //  //font-size: 25px;
+  //  font-size: 2em;
+  //}
+  //
+  //h2.container-title {
+  //  font-size: 30px;
+  //}
+  //
+  //.h3, h3 {
+  //  //font-size: 20px;
+  //  font-size: 1.6em;
+  //}
 
   #cookie-bar p {
     float: left;
@@ -752,7 +774,6 @@ h2 img {
   margin: auto;
 }
 
-
 @keyframes pulse {
   0% {
     opacity: 0.2;
@@ -823,3 +844,23 @@ h2 img {
 /*transform: perspective(2500px) rotateY(100deg);*/
 /*}*/
 
+img#header-logo {
+  width: 470px;
+}
+
+section.section-one {
+  background-color: #f2f2f2;
+}
+
+@media (max-width: 991px) {
+  section.section-one img#header-logo {
+    width: 47vw;
+  }
+}
+
+.map-open:hover {
+  cursor: pointer;
+}
+.empty {
+  height: 0 !important;
+}
